@@ -1,0 +1,17 @@
+
+Rabbit MQ--Instructions to start the service
+
+First, from an elevated command prompt, change directory to the sbin folder within the RabbitMQ Server installation directory (e.g. %PROGRAMFILES%\RabbitMQ Server\rabbitmq_server_2.7.1\sbin).
+
+Next, run the following command to enable the rabbitmq management plugin:
+
+rabbitmq-plugins.bat enable rabbitmq_management 
+ 
+
+Lastly, to enable the management plugin we need to reinstall the RabbitMQ service.  Execute the following sequence of commands to reinstall the service:
+
+rabbitmq-service.bat stop 
+rabbitmq-service.bat install 
+rabbitmq-service.bat start 
+
+Note: The management plugin URL has been changed to http://localhost:15672/ for versions 3.0 and higher.
